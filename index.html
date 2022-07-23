@@ -11,28 +11,27 @@
 <body>
     <div id="header">
         <h1 id="library-header">library</h1>
-    </div>
-    <div class="container">
+
         <button class="add-book" onclick="openForm()">+ Add Book</button>
         
         <div class="form-popup" id="myForm">
-            <form action="action-page.html">
+            <form action="#">
 
                 <label for="title">Title</label>
-                <input type="text" placeholder="The Brothers Karamazov" name="title" required>
+                <input id="title" type="text" placeholder="The Brothers Karamazov" name="title" required>
 
                 <label for="author">Author</label>
-                <input type="text" placeholder="Fyodor Dostoevsky" name="author">
+                <input id="author" type="text" placeholder="Fyodor Dostoevsky" name="author">
 
                 <label for="page-count">Pages</label>
-                <input type="number" placeholder="800">
+                <input id="page-count" type="number" placeholder="800">
 
                 <fieldset>
                     <legend>Have you read it?</legend>
                     <ul>
                         <li>
                             <label for="yes">
-                                <input type="radio" id="yes" name="readstatus" value="Yes">
+                                <input type="radio" id="yes" name="readstatus" value="yes">
                                 Yes
                             </label>
                         </li>
@@ -44,11 +43,15 @@
                         </li>
                     </ul>
                 </fieldset>
+
+                <button type="button" onclick="addBooktoLibrary()" id="send" class="btn">Add Book</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
             </form>
         </div>
-        <div class="book-titles">
-
-        </div>
+    </div>
+    <div id="book-container">
+        
     </div>
 </body>
 </html>
