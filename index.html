@@ -12,7 +12,7 @@
     <div id="header">
         <h1 id="library-header">library</h1>
 
-        <button class="add-book" onclick="openForm()">+ Add Book</button>
+        <button class="add-book" onclick="library.openForm()">+ Add Book</button>
         
         <div class="form-popup" id="myForm">
             <form action="#">
@@ -44,8 +44,8 @@
                     </ul>
                 </fieldset>
 
-                <button type="button" onclick="addBooktoLibrary()" id="send" class="btn">Add Book</button>
-                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+                <button type="button" onclick="library.addBooktoLibrary()" id="send" class="btn">Add Book</button>
+                <button type="button" class="btn cancel" onclick="library.closeForm()">Close</button>
 
             </form>
         </div>
